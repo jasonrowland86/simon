@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel='stylesheet' type='text/css' href='reset.css'>
+    <link rel='stylesheet' type='text/css' href='stylesheet.css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <title>Simon</title>
+  </head>
+  <body>
+    <div class="game-display">
+      <div>
+        <div><a href='http://jasonrowland.co'>jasonrowland.co</a></div>
+      </div>
+      <div>
+        <div id="level">Level 0</div>
+      </div>
+      <div>
+        <i id="volume" class="fas fa-volume-up"></i>
+        <div id="highest-level">Highest Level 0</div>
+      </div>
+    </div>
+    <div id="game-container">
+      <div class="game-container-half">
+        <div id="simon1" class="game-button  blue"></div>
+        <div id="simon2" class="game-button yellow"></div>
+      </div>
+      <div class="game-container-half">
+        <div id="simon3" class="game-button pink"></div>
+        <div id="simon4" class="game-button green"></div>
+      </div>
+    </div>
+    <div id="start-button">start</div>
+    <div id="press-start">Press Start</div>
+    <div id="game-over" class="hide">Game Over</div>
+    <script type="text/javascript" src="simon.js"></script>
+  </body>
+</html>

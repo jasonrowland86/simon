@@ -63,6 +63,7 @@ document.addEventListener("DOMContentLoaded", ()=> {
       pressStart.classList.remove('hide');
       pressStart.innerText = 'Computer Turn';
       animateSequence();
+
   }
 
   function playerTurn() {
@@ -133,6 +134,9 @@ document.addEventListener("DOMContentLoaded", ()=> {
         if (lit && lit.classList.contains("light")){
   	  	  off(lit);
   	  } else if (next){
+          if(volume) {
+            playSoundCA(next);
+          }
           on(next);
   		    i++;
         } else {
@@ -142,9 +146,6 @@ document.addEventListener("DOMContentLoaded", ()=> {
       }
       function on(element){
         console.log(element.id);
-        if(volume) {
-          playSoundCA(element);
-        }
         element.classList.add("bg-" + element.classList[1]);
         element.classList.add("light");
         element.classList.add("bg-light");
@@ -223,10 +224,6 @@ document.addEventListener("DOMContentLoaded", ()=> {
     pressStart.classList.add('game-over');
     pressStart.classList.remove("blink");
     pressStart.classList.remove('hide');
-    // let audio = new Audio('audio/game-over.wav');
-    // if(volume) {
-    //   audio.play();
-    // }
     gameContainer.classList.add('shake');
     setTimeout(function(){
       gameContainer.classList.remove('shake');
